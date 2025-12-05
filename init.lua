@@ -27,3 +27,4 @@ if not vim.loop.fs_stat(lazypath) then
 
     -- Solo dopo imposto il colorscheme
     require("core.colorscheme")
+   
