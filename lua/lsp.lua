@@ -1,0 +1,1 @@
+-- /home/thefog/.config/nvim/lua/lsp.lua

@@ -1,0 +1,153 @@
+Perfetto 🚀! Ti preparo la configurazione modulare per tutti i moduli che hai elencato: **mini.animate**, **mini.cursorword**, **mini.hipatterns**, **mini.icons**, **mini.indentscope**, **mini.notify**, **mini.starter**, **mini.statusline**, **mini.tabline**.
+(Nota: avevi scritto “mini crossword” ma il modulo corretto è **mini.cursorword**).
+
+---
+
+## 📂 Struttura dei file
+
+Dentro `~/.config/nvim/lua/plugins/` creerai un file per ciascun modulo:
+
+```
+lua/plugins/
+├── minianimate.lua
+├── minicursorword.lua
+├── minihipatterns.lua
+├── miniicons.lua
+├── miniindentscope.lua
+├── mininotify.lua
+├── ministarter.lua
+├── ministatusline.lua
+└── minitabline.lua
+```
+
+---
+
+## 📄 Esempi di configurazione
+
+### mini.animate
+```lua
+-- lua/plugins/minianimate.lua
+require("mini.animate").setup()
+```
+
+### mini.cursorword
+```lua
+-- lua/plugins/minicursorword.lua
+require("mini.cursorword").setup()
+```
+
+### mini.hipatterns
+```lua
+-- lua/plugins/minihipatterns.lua
+require("mini.hipatterns").setup({
+  highlighters = {
+    hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
+    todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+  },
+})
+```
+
+### mini.icons
+```lua
+-- lua/plugins/miniicons.lua
+require("mini.icons").setup()
+```
+
+### mini.indentscope
+```lua
+-- lua/plugins/miniindentscope.lua
+require("mini.indentscope").setup({
+  symbol = "│",
+  options = { try_as_border = true },
+})
+```
+
+### mini.notify
+```lua
+-- lua/plugins/mininotify.lua
+require("mini.notify").setup()
+vim.notify = require("mini.notify").make_notify()
+```
+
+### mini.starter
+```lua
+-- lua/plugins/ministarter.lua
+require("mini.starter").setup({
+  items = {
+    { action = "edit ~/.config/nvim/init.lua", name = "Config", section = "Config" },
+    { action = "Lazy sync", name = "Update Plugins", section = "Plugins" },
+  },
+  header = "Ciao Valerio, bentornato!",
+})
+```
+
+### mini.statusline
+```lua
+-- lua/plugins/ministatusline.lua
+require("mini.statusline").setup()
+```
+
+### mini.tabline
+```lua
+-- lua/plugins/minitabline.lua
+require("mini.tabline").setup()
+```
+
+---
+
+## 📄 lua/plugins/init.lua
+
+Aggiungi queste voci dentro al tuo `require("lazy").setup({ ... })`:
+
+```lua
+{
+  "echasnovski/mini.animate",
+  version = false,
+  config = function() require("plugins.minianimate") end,
+},
+{
+  "echasnovski/mini.cursorword",
+  version = false,
+  config = function() require("plugins.minicursorword") end,
+},
+{
+  "echasnovski/mini.hipatterns",
+  version = false,
+  config = function() require("plugins.minihipatterns") end,
+},
+{
+  "echasnovski/mini.icons",
+  version = false,
+  config = function() require("plugins.miniicons") end,
+},
+{
+  "echasnovski/mini.indentscope",
+  version = false,
+  config = function() require("plugins.miniindentscope") end,
+},
+{
+  "echasnovski/mini.notify",
+  version = false,
+  config = function() require("plugins.mininotify") end,
+},
+{
+  "echasnovski/mini.starter",
+  version = false,
+  config = function() require("plugins.ministarter") end,
+},
+{
+  "echasnovski/mini.statusline",
+  version = false,
+  config = function() require("plugins.ministatusline") end,
+},
+{
+  "echasnovski/mini.tabline",
+  version = false,
+  config = function() require("plugins.minitabline") end,
+},
+```
+
+---
+
+👉 In questo modo hai tutti i moduli caricati in maniera modulare e pulita.
+Vuoi che ti prepari anche una **tabella riassuntiva con i keymaps e le funzioni principali** di ciascun modulo, così hai subito un “cheat sheet” pratico?

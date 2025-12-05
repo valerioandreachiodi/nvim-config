@@ -16,12 +16,39 @@ local cheatsheet_lines = {
   "  0 / ^ / $       → Inizio / Primo / Fine riga",
   "  gg / G          → Inizio / Fine file",
   "  %               → Vai a parentesi corrispondente",
+  "  Ctrl-d / Ctrl-u → Salta giù / su mezza pagina",
+  "  Ctrl-f / Ctrl-b → Salta giù / su una pagina intera",
   "",
   "  File & Buffer",
   "  <leader>w       → Salva file",
   "  <leader>q       → Chiudi buffer",
   "  <leader>bn/bp   → Buffer successivo / precedente",
-  "  <leader>e       → File explorer",
+  "",
+  "  Neo-tree",
+  "  <leader>e       → Apri/chiudi file explorer a sinistra",
+  "  <leader>E       → Apri/chiudi file explorer a destra",
+  "  o               → Apri/chiudi directory o file",
+  "  s               → Apri in split verticale",
+  "  i               → Apri in split orizzontale",
+  "  t               → Apri in nuova tab",
+  "  a               → Aggiungi file/directory",
+  "  r               → Rinomina",
+  "  d               → Elimina",
+  "  c               → Copia",
+  "  x               → Taglia",
+  "  p               → Incolla",
+  "  q               → Chiudi Neo-tree",
+  "",
+  "  Telescope",
+  "  <leader>ff      → Trova file",
+  "  <leader>fg      → Live grep (ricerca testo)",
+  "  <leader>fb      → Lista buffer aperti",
+  "  <leader>fh      → Help tags",
+  "  <leader>fo      → File recenti (oldfiles)",
+  "  <leader>fs      → Cerca parola sotto il cursore",
+  "  <leader>fd      → Diagnostica LSP",
+  "  <leader>fr      → Riferimenti LSP",
+  "  <leader>fD      → Definizioni LSP",
   "",
   "  Editing",
   "  yy / dd         → Copia / Taglia riga",
@@ -29,10 +56,10 @@ local cheatsheet_lines = {
   "  x               → Cancella carattere",
   "  u / Ctrl-r      → Undo / Redo",
   "",
-  "  Ricerca",
-  "  /testo          → Cerca avanti",
-  "  n / N           → Ripeti ricerca",
-  "  :%s/a/b/g       → Sostituisci tutto",
+  "  Terminale",
+  "  :terminal       → Apri terminale in una finestra",
+  "  Ctrl-w N        → Torna in modalità normale nel terminale",
+  "  i               → Torna in modalità inserimento nel terminale",
   "",
   "  Macro",
   "  q[a-z]          → Inizia registrazione",
@@ -75,17 +102,13 @@ if win and vim.api.nvim_win_is_valid(win) then
 
     vim.api.nvim_win_set_option(win, "winhl", "Normal:NormalFloat,FloatBorder:FloatBorder")
 
-    ----------------------------------------------------------------
     -- Highlight automatico
-    ----------------------------------------------------------------
     for i, line in ipairs(cheatsheet_lines) do
       if line:match("") or line:match("") or line:match("")
         or line:match("") or line:match("") or line:match("")
-        or line:match("") then
-        -- Titoli in rosso
+        or line:match("") or line:match("") or line:match("") then
         vim.api.nvim_buf_add_highlight(buf, -1, "Error", i-1, 0, -1)
         elseif line:match("→") then
-          -- Comandi in verde
           vim.api.nvim_buf_add_highlight(buf, -1, "String", i-1, 0, -1)
           end
           end

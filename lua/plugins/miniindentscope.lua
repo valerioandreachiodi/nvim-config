@@ -1,0 +1,5 @@
+-- lua/plugins/miniindentscope.lua
+require("mini.indentscope").setup({
+    symbol = "│",
+    options = { try_as_border = true },
+})
