@@ -1,9 +1,21 @@
 -- lua/plugins/ministarter.lua
+local header_lines = {
+    [[                                                                       ]],
+    [[                                                                     ]],
+    [[       ████ ██████           █████      ██                     ]],
+    [[      ███████████             █████                             ]],
+    [[      █████████ ███████████████████ ███   ███████████   ]],
+    [[     █████████  ███    █████████████ █████ ██████████████   ]],
+    [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+    [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+    [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+    [[                                                                       ]],
+}
 require("mini.starter").setup({
     items = {
-        { action = "enew", name = "New File", section = "Files" }, -- nuovo file
+        { action = "enew", name = "New File", section = "Files" },
         { action = "edit ~/.config/nvim/init.lua", name = "Config", section = "Config" },
         { action = "Lazy sync", name = "Update Plugins", section = "Plugins" },
     },
-    header = "Ciao Valerio, bentornato!",
+    header = table.concat(header_lines, "\n"),
 })
