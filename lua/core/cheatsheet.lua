@@ -65,6 +65,33 @@ local cheatsheet_lines = {
   "  x               → Cancella carattere",
   "  u / Ctrl-r      → Undo / Redo",
   "",
+  "  Mini.diff",
+  "  :DiffToggle     → Attiva/disattiva la visualizzazione diff",
+  "  :DiffUpdate     → Aggiorna il diff corrente",
+  "  :DiffAdd        → Aggiungi file al diff",
+  "  :DiffRemove     → Rimuovi file dal diff",
+  "",
+  "  Mini.files",
+  "  -               → Apri file explorer minimalista",
+  "  <CR>            → Apri file/directory",
+  "  q               → Chiudi explorer",
+  "  h/l             → Naviga indietro/avanti directory",
+  "",
+  "  Mini.visits",
+  "  :VisitsAdd      → Aggiungi file corrente alla lista visite",
+  "  :VisitsList     → Mostra file visitati di recente",
+  "  :VisitsRemove   → Rimuovi file dalla lista visite",
+  "",
+  "  Mini.notify",
+  "  :Notify 'msg'   → Mostra notifica con messaggio",
+  "  :NotifyClear    → Cancella notifiche",
+  "",
+  "  Mini.starter",
+  "  Appare all’avvio con menu personalizzabile",
+  "  f               → Trova file",
+  "  q               → Chiudi Neovim",
+  "  r               → File recenti",
+  "",
   "  Mini.ai (Text Objects)",
   "  vi( / va(       → Interno / esterno parentesi tonde",
   "  vi[ / va[       → Interno / esterno parentesi quadre",
@@ -76,6 +103,7 @@ local cheatsheet_lines = {
   "  vat             → Seleziona tag HTML/XML",
   "  va<Space>       → Seleziona blocco di spazi consecutivi",
   "  va?             → Seleziona fino al punto interrogativo",
+  "  vaW / viW       → Interno / esterno parola intera",
   "",
   "  Terminale",
   "  :terminal       → Apri terminale in una finestra",
@@ -92,6 +120,7 @@ local cheatsheet_lines = {
   "  Ctrl-w h/j/k/l  → Muovi tra finestre",
   "  <leader>tn/tp   → Nuova tab / tab precedente",
 }
+
 
 -- Funzione toggle
 function M.toggle()
@@ -134,6 +163,12 @@ if win and vim.api.nvim_win_is_valid(win) then
         or line:match("") or line:match("") or line:match("")
         or line:match("") or line:match("") then
         vim.api.nvim_buf_add_highlight(buf, -1, "Error", i-1, 0, -1)
+        elseif line:match("") then
+          -- questo diventa giallo
+          vim.api.nvim_buf_add_highlight(buf, -1, "WarningMsg", i-1, 0, -1)
+        elseif line:match("") then
+          -- questo diventa un altro colore, ad esempio blu
+          vim.api.nvim_buf_add_highlight(buf, -1, "Identifier", i-1, 0, -1)
         elseif line:match("→") then
           vim.api.nvim_buf_add_highlight(buf, -1, "String", i-1, 0, -1)
           end
