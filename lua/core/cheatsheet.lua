@@ -19,6 +19,15 @@ local cheatsheet_lines = {
   "  Ctrl-d / Ctrl-u → Salta giù / su mezza pagina",
   "  Ctrl-f / Ctrl-b → Salta giù / su una pagina intera",
   "",
+  "  Scorrimento & Posizionamento",
+  "  Ctrl-f / Ctrl-b → Scendi / sali di una pagina intera",
+  "  Ctrl-d / Ctrl-u → Scendi / sali di mezza pagina",
+  "  H / M / L       → Porta il cursore in alto / mezzo / basso dello schermo",
+  "  10j / 20j       → Scendi di 10 / 20 righe",
+  "  10k / 20k       → Sali di 10 / 20 righe",
+  "  Alt-j           → Salta 10 righe giù (mapping personalizzato)",
+  "  Alt-k           → Salta 10 righe su (mapping personalizzato)",
+  "",
   "  File & Buffer",
   "  <leader>w       → Salva file",
   "  <leader>q       → Chiudi buffer",
@@ -56,6 +65,18 @@ local cheatsheet_lines = {
   "  x               → Cancella carattere",
   "  u / Ctrl-r      → Undo / Redo",
   "",
+  "  Mini.ai (Text Objects)",
+  "  vi( / va(       → Interno / esterno parentesi tonde",
+  "  vi[ / va[       → Interno / esterno parentesi quadre",
+  "  vi{ / va{       → Interno / esterno parentesi graffe",
+  "  vi\" / va\"     → Interno / esterno virgolette",
+  "  vi' / va'       → Interno / esterno apici",
+  "  vaf             → Seleziona funzione intera (Treesitter)",
+  "  vai             → Seleziona argomento",
+  "  vat             → Seleziona tag HTML/XML",
+  "  va<Space>       → Seleziona blocco di spazi consecutivi",
+  "  va?             → Seleziona fino al punto interrogativo",
+  "",
   "  Terminale",
   "  :terminal       → Apri terminale in una finestra",
   "  Ctrl-w N        → Torna in modalità normale nel terminale",
@@ -85,6 +106,10 @@ if win and vim.api.nvim_win_is_valid(win) then
     vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = buf })
     vim.api.nvim_set_option_value("modifiable", false, { buf = buf })
 
+    -- Colore blu stile Everforest per il titolo
+    vim.api.nvim_set_hl(0, "CheatsheetTitle", { fg = "#7fbbb3", bold = true })
+    vim.api.nvim_buf_add_highlight(buf, -1, "CheatsheetTitle", 0, 0, -1)
+
     local width = math.floor(vim.o.columns * 0.6)
     local height = math.floor(vim.o.lines * 0.7)
     local row = math.floor((vim.o.lines - height) / 2)
@@ -106,7 +131,8 @@ if win and vim.api.nvim_win_is_valid(win) then
     for i, line in ipairs(cheatsheet_lines) do
       if line:match("") or line:match("") or line:match("")
         or line:match("") or line:match("") or line:match("")
-        or line:match("") or line:match("") or line:match("") then
+        or line:match("") or line:match("") or line:match("")
+        or line:match("") or line:match("") then
         vim.api.nvim_buf_add_highlight(buf, -1, "Error", i-1, 0, -1)
         elseif line:match("→") then
           vim.api.nvim_buf_add_highlight(buf, -1, "String", i-1, 0, -1)

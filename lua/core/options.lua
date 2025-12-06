@@ -2,7 +2,6 @@
 -- Opzioni di base
 vim.opt.number          = true
 vim.opt.relativenumber  = false
-vim.opt.signcolumn      = "yes"
 vim.opt.termguicolors   = true
 vim.o.mouse             = "a"
 

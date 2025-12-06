@@ -1,6 +1,9 @@
 -- /home/thefog/.config/nvim/init.lua
 -- ~/.config/nvim/init.lua
 
+-- per clippord weiland
+-- sudo apt install wl-clipboard
+
 -- Messaggio di benvenuto
 vim.cmd([[echo "Ciao Valerio, bentornato. Inchiodali tutti !"]])
 
@@ -20,7 +23,6 @@ if not vim.loop.fs_stat(lazypath) then
     -- Carico prima opzioni e keymaps
     require("core.options")
     require("core.keymaps")
-    require("core.autocmds")
 
     -- Poi carico i plugin
     require("plugins")
