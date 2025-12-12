@@ -174,7 +174,7 @@ Io uso questa
 
 Ecco una sezione badge già pronta da incollare:
 
-```md
+
 <p align="center">
   <img src="https://img.shields.io/badge/Neovim-0.10+-57A143?style=for-the-badge&logo=neovim&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-Debian_13_(Trixie)-A80030?style=for-the-badge&logo=debian&logoColor=white" />
@@ -184,14 +184,14 @@ Ecco una sezione badge già pronta da incollare:
   <img src="https://img.shields.io/badge/Plugin_Manager-Lazy.nvim-FFD700?style=for-the-badge" />
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/Neovim-0.10+-A7C080?style=for-the-badge&logo=neovim&logoColor=D3C6AA&labelColor=2D353B" />
-  <img src="https://img.shields.io/badge/Debian-13_(Trixie)-83C092?style=for-the-badge&logo=debian&logoColor=D3C6AA&labelColor=2D353B" />
-  <img src="https://img.shields.io/badge/KDE_Plasma-Workspace-DBBC7F?style=for-the-badge&logo=kde&logoColor=D3C6AA&labelColor=2D353B" />
-  <img src="https://img.shields.io/badge/Font-Victor_Mono_Nerd_Font-E69875?style=for-the-badge&labelColor=2D353B&logoColor=D3C6AA" />
-  <img src="https://img.shields.io/badge/Theme-Everforest-A7C080?style=for-the-badge&labelColor=2D353B&logoColor=D3C6AA" />
-  <img src="https://img.shields.io/badge/Plugin_Manager-Lazy.nvim-83C092?style=for-the-badge&labelColor=2D353B&logoColor=D3C6AA" />
+  <img src="https://img.shields.io/badge/Neovim-0.10+-A7C080?style=for-the-badge&logo=neovim&logoColor=D3C6AA&labelColor=2D353B">
+  <img src="https://img.shields.io/badge/Debian-13_(Trixie)-83C092?style=for-the-badge&logo=debian&logoColor=D3C6AA&labelColor=2D353B">
+  <img src="https://img.shields.io/badge/KDE_Plasma-Workspace-DBBC7F?style=for-the-badge&logo=kde&logoColor=D3C6AA&labelColor=2D353B">
+  <img src="https://img.shields.io/badge/Font-Victor_Mono_Nerd_Font-E69875?style=for-the-badge&labelColor=2D353B&logoColor=D3C6AA">
+  <img src="https://img.shields.io/badge/Theme-Everforest-A7C080?style=for-the-badge&labelColor=2D353B&logoColor=D3C6AA">
+  <img src="https://img.shields.io/badge/Plugin_Manager-Lazy.nvim-83C092?style=for-the-badge&labelColor=2D353B&logoColor=D3C6AA">
+</p>
 
-```
 
 ---
 
