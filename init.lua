@@ -28,5 +28,6 @@ if not vim.loop.fs_stat(lazypath) then
     require("plugins")
 
     -- Solo dopo imposto il colorscheme
-    require("core.colorscheme")
+    require("core.everforest")
+    -- require("core.tokyonight")
    

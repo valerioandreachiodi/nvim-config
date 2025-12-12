@@ -5,6 +5,11 @@ require("lazy").setup({
         lazy = false,
         priority = 1000
     },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000
+    },
 
     { "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
