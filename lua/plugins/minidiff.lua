@@ -4,7 +4,7 @@
 require("mini.diff").setup({
     -- Mostra i cambiamenti come segni nel gutter
     view = {
-        style = "sign", -- puoi usare anche "number" o "line"
+        style = "sign", -- puoi usare anche "number" o "line" o "sign"
     },
     -- Navigazione tra hunks
     mappings = {

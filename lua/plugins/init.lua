@@ -43,6 +43,9 @@ require("lazy").setup({
                       { "echasnovski/mini.statusline",  version = false, config = function() require("plugins.ministatusline") end },
                       { "echasnovski/mini.tabline",     version = false, config = function() require("plugins.minitabline") end },
 
+                      -- Aggiunta Mini.comment
+                      { "echasnovski/mini.comment",     version = false, config = function() require("mini.comment").setup() end },
+
                       { "nvim-telescope/telescope.nvim",
                           branch = "0.1.x",
                           dependencies = { "nvim-lua/plenary.nvim" },
@@ -50,4 +53,31 @@ require("lazy").setup({
                       },
 
                       { "echasnovski/mini.ai", version = false, config = function() require("mini.ai").setup() end },
+                      -- Git integration
+                      { "lewis6991/gitsigns.nvim", config = function() require("plugins.gitsigns") end },
+
+                      -- Linting
+                      { "mfussenegger/nvim-lint", config = function() require("plugins.lint") end },
+
+                      -- Trouble.nvim
+                      { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, config = function() require("plugins.trouble") end },
+
+                      -- Surround (mini)
+                      { "echasnovski/mini.surround", version = false, config = function() require("plugins.minisurround") end },
+
+                        -- Substitution
+                      { "nvim-pack/nvim-spectre", dependencies = { "nvim-lua/plenary.nvim" }, config = function() require("plugins.spectre") end },
+
+                      -- Dressing
+                      { "stevearc/dressing.nvim" },
+
+                      -- Which-key
+                      { "folke/which-key.nvim", config = function() require("plugins.whichkey") end },
+                      -- LazyGit integration
+                      { "kdheepak/lazygit.nvim",
+                          dependencies = { "nvim-lua/plenary.nvim" },
+                          config = function()
+                           require("plugins.lazygit")
+                          end
+                      },
 })

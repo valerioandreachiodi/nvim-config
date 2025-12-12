@@ -8,6 +8,16 @@ require("neo-tree").setup({
             hide_gitignored = true,
         },
     },
+       default_component_configs = {
+        indent = {
+            with_markers = true,            -- mostra i marker di indentazione (│ └)
+            indent_marker = "│",            -- carattere per l'indentazione
+            last_indent_marker = "└",       -- carattere finale
+            expander_collapsed = "▶",      -- freccia chiusa (puoi usare ▶)
+            expander_expanded = "▼",       -- freccia aperta (puoi usare ▼)
+            expander_highlight = "NeoTreeExpander",
+        },
+    },
 })
 
 vim.keymap.set("n", "<leader>e", function()
