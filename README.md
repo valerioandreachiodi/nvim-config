@@ -71,12 +71,23 @@ Il tema utilizzato è **Everforest**.
 
 > Alcune anteprime della mia configurazione Neovim con tema **Everforest** su KDE Plasma (Wayland).
 
-*(Aggiungi qui le tue immagini, ad esempio:)*
+```md
+## 📸 Screenshots
 
-```
-![Dashboard](./screenshots/dashboard.png)
-![Editing](./screenshots/editing.png)
-![Telescope](./screenshots/telescope.png)
+<p align="center">
+  <img src="./screenshots/dashboard.png" width="85%" alt="Dashboard">
+  <br><em>Dashboard iniziale (mini.starter + Everforest)</em>
+</p>
+
+<p align="center">
+  <img src="./screenshots/editing.png" width="85%" alt="Editing">
+  <br><em>Editing di un file con LSP attivo</em>
+</p>
+
+<p align="center">
+  <img src="./screenshots/telescope.png" width="85%" alt="Telescope">
+  <br><em>Telescope in azione (find_files)</em>
+</p>
 ```
 
 ---
