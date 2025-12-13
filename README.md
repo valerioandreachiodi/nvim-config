@@ -189,7 +189,7 @@ Io uso questa
   <img src="https://img.shields.io/badge/Theme-Everforest-556B2F?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Plugin_Manager-Lazy.nvim-FFD700?style=for-the-badge" />
 </p>
----
+
 
 # Colori Everforest
 
