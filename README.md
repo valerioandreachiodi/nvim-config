@@ -75,21 +75,24 @@ Il tema utilizzato è **Everforest**.
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./screenshots/dashboard.png" width="85%" alt="Dashboard">
+  <img src="./screenshots/dashboard.png" width="65%" alt="Dashboard">
   <br><em>Dashboard iniziale (mini.starter + Everforest)</em>
 </p>
 
 <p align="center">
-  <img src="./screenshots/editing.png" width="85%" alt="Editing">
+  <img src="./screenshots/editing.png" width="65%" alt="Editing">
   <br><em>Editing di un file con LSP attivo</em>
 </p>
 
 <p align="center">
-  <img src="./screenshots/telescope.png" width="85%" alt="Telescope">
+  <img src="./screenshots/telescope.png" width="65%" alt="Telescope">
   <br><em>Telescope in azione (find_files)</em>
 </p>
 
-
+<p align="center">
+  <img src="./screenshots/lazygit.png" width="65%" alt="Lazygit">
+  <br><em> Lazygit integrato in NeoVim </em>
+</p>
 ---
 
 ## ⌨️ Keymaps principali
@@ -137,13 +140,7 @@ Sono pensate per essere semplici, mnemoniche e veloci.
 
 ---
 
-Perfetto, ti preparo **un logo ASCII elegante** per il tuo README e una **sezione badge** in stile moderno, così il progetto sembra subito più professionale.
-
----
-
 # 🎨 Logo ASCII
-
-Puoi inserirlo all’inizio del README, sopra il titolo:
 
 ```
  _   _                 _           
@@ -183,8 +180,6 @@ Io uso questa
 
 # 🏷️ Badge
 
-Ecco una sezione badge già pronta da incollare:
-
 
 <p align="center">
   <img src="https://img.shields.io/badge/Neovim-0.10+-57A143?style=for-the-badge&logo=neovim&logoColor=white" />
@@ -194,6 +189,11 @@ Ecco una sezione badge già pronta da incollare:
   <img src="https://img.shields.io/badge/Theme-Everforest-556B2F?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Plugin_Manager-Lazy.nvim-FFD700?style=for-the-badge" />
 </p>
+---
+
+# Colori Everforest
+
+---
 <p align="center">
   <img src="https://img.shields.io/badge/Neovim-0.10+-A7C080?style=for-the-badge&logo=neovim&logoColor=D3C6AA&labelColor=2D353B">
   <img src="https://img.shields.io/badge/Debian-13_(Trixie)-83C092?style=for-the-badge&logo=debian&logoColor=D3C6AA&labelColor=2D353B">
