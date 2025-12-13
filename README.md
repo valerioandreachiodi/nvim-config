@@ -80,7 +80,7 @@ Il tema utilizzato è **Everforest**.
 </p>
 
 <p align="center">
-  <img src="./screenshots/editing.png" width="65%" alt="Editing">
+  <img src="./screenshots/editing.png" width="35%" alt="Editing">
   <br><em>Editing di un file con LSP attivo</em>
 </p>
 
