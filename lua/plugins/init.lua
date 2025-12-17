@@ -90,4 +90,13 @@ require("lazy").setup({
                            require("plugins.lazygit")
                           end
                       },
+                      {
+                          "akinsho/toggleterm.nvim",
+                          version = "*",
+                          config = function()
+                          require("plugins.toggleterm").setup()
+                          end,
+                      },
+
+
 })
