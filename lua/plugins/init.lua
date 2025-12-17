@@ -10,7 +10,12 @@ require("lazy").setup({
         lazy = false,
         priority = 1000
     },
-
+    {
+        "folke/twilight.nvim",
+        config = function()
+        require("plugins.twilight") -- carica la tua configurazione da lua/plugins/twilight.lua
+        end,
+    },
     { "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function() require("plugins.treesitter") end
