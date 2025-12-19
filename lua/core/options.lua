@@ -5,9 +5,14 @@ vim.opt.relativenumber  = false
 vim.opt.termguicolors   = true
 vim.o.mouse             = "a"
 
--- Leader
-vim.g.mapleader      = " "
-vim.g.maplocalleader = " "
+-- Leader originale
+-- vim.g.mapleader      = " "
+-- vim.g.maplocalleader = " "
+
+-- Leader nuovo (che poi è quello di Vim)
+vim.g.mapleader      = "\\"
+vim.g.maplocalleader = "\\"
+
 
 -- numero di spazi mostrati per un tab
 vim.opt.tabstop = 4

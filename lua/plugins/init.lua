@@ -53,6 +53,9 @@ require("lazy").setup({
                       { "echasnovski/mini.statusline",  version = false, config = function() require("plugins.ministatusline") end },
                       { "echasnovski/mini.tabline",     version = false, config = function() require("plugins.minitabline") end },
 
+                      { import = "plugins.mini_map" },
+
+
                       -- Aggiunta Mini.comment
                       { "echasnovski/mini.comment",     version = false, config = function() require("mini.comment").setup() end },
 
@@ -61,6 +64,9 @@ require("lazy").setup({
                           dependencies = { "nvim-lua/plenary.nvim" },
                           config = function() require("plugins.telescope") end
                       },
+
+                      { import = "plugins.ui" },
+
 
                       { "echasnovski/mini.ai", version = false, config = function() require("mini.ai").setup() end },
                       -- Git integration
@@ -79,7 +85,7 @@ require("lazy").setup({
                       { "nvim-pack/nvim-spectre", dependencies = { "nvim-lua/plenary.nvim" }, config = function() require("plugins.spectre") end },
 
                       -- Dressing
-                      { "stevearc/dressing.nvim" },
+                      -- { "stevearc/dressing.nvim" },
 
                       -- Which-key
                       { "folke/which-key.nvim", config = function() require("plugins.whichkey") end },
@@ -98,5 +104,17 @@ require("lazy").setup({
                           end,
                       },
 
+
+                      -- Todo-comments.nvim (gestione TODO/FIX/NOTE nei file)
+                      { "folke/todo-comments.nvim",
+                           dependencies = { "nvim-lua/plenary.nvim" },
+                           config = function() require("plugins.todo") end
+                      },
+
+                      -- Trouble.nvim (vista centralizzata per diagnostiche e riferimenti)
+                      { "folke/trouble.nvim",
+                           dependencies = { "nvim-tree/nvim-web-devicons" },
+                           config = function() require("plugins.trouble") end
+                      },
 
 })
