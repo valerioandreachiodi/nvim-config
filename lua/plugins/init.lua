@@ -117,4 +117,13 @@ require("lazy").setup({
                            config = function() require("plugins.trouble") end
                       },
 
+
+                      -- Markdown Preview
+                      { "iamcco/markdown-preview.nvim",
+                      ft = { "markdown" },
+                      build = "cd app && npm install",
+                      config = function()
+                      require("plugins.markdown-preview")
+                      end,
+                          },
 })
