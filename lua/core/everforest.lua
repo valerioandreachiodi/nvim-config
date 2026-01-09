@@ -31,7 +31,7 @@ if not ok then
 
     -- Rust
     vim.api.nvim_set_hl(0, "@keyword.rust",        { italic = true })
-    vim.api.nvim_set_hl(0, "@keyword.modifier.rust",{ italic = true }) -- pub, mut, etc.
+    vim.api.nvim_set_hl(0, "@keyword.modifier.rust",{ italic = true })  -- pub, mut, etc.
 
     -- HTML
     vim.api.nvim_set_hl(0, "@tag",                 { italic = true })

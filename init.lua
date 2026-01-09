@@ -30,4 +30,7 @@ if not vim.loop.fs_stat(lazypath) then
     -- Solo dopo imposto il colorscheme
     require("core.everforest")
     -- require("core.tokyonight")
-   
+
+    -- Poi gli override
+    require("core.colors")
+
