@@ -5,7 +5,7 @@
 -- sudo apt install wl-clipboard
 
 -- Messaggio di benvenuto
-vim.cmd([[echo "Ciao Valerio, bentornato. Inchiodali tutti !"]])
+-- vim.cmd([[echo "Ciao Valerio, bentornato. Inchiodali tutti !"]])
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

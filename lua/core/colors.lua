@@ -23,20 +23,21 @@ local grey0   = "#7a8478" -- Commenti
 local grey1   = "#859289"
 local grey2   = "#9da9a0"
 ----------------------------------------------------------------------------
--- Yoru no Mori 夜の森
---bg-dark:   #1c1f1d;
---bg:        #232825;
---bg-hl:     #2c322f;
---fg:        #d2cbb8;
---fg-dim:    #b8b2a0;
---green:     #a7c080;
---yellow:    #d9b97a;
---orange:    #e39a6a;
---red:       #e67e80;
---blue:      #7fbbb3;
---purple:    #d699b6;
---crimson:   #b85c5c;
---steel:     #8a9aa0;
+-- PALETTE Yoru no Mori 夜の森
+----------------------------------------------------------------------------
+  --  bg-dark:   #1c1f1d;
+  --  bg:        #232825;
+  --  bg-hl:     #2c322f;
+  --  fg:        #d2cbb8;
+  --  fg-dim:    #b8b2a0;
+  --  green:     #a7c080;
+local giallo  = "#d9b97a"
+  --  orange:    #e39a6a;
+  --  red:       #e67e80;
+  --  blue:      #7fbbb3;
+local viola   = "#6C4A7E"
+local crimson = "#b85c5c"
+  --  steel:     #8a9aa0;
 --.comment   { color: var(--fg-dim); font-style: italic; }
 --.keyword   { color: var(--crimson); font-style: italic; }
 --.fn        { color: var(--blue); font-weight: 600; }
@@ -55,25 +56,25 @@ local grey2   = "#9da9a0"
 
 local highlights = {
     -- Keyword e Funzioni
-    ["@keyword.function"] = { fg = orange, bold = true },
-    ["@keyword.rust"]          = { fg = orange },
-    ["@keyword.type.rust"]     = { fg = orange, bold = true },
-    ["@keyword.modifier.rust"] = { fg = aqua, italic = true },
+--    ["@keyword.function"] = { fg = orange, bold = true },
+--    ["@keyword.rust"]          = { fg = orange },
+--    ["@keyword.type.rust"]     = { fg = orange, bold = true },
+    ["@keyword.modifier.rust"] = { fg = crimson, italic = true },
 
     -- Tipi e Variabili
     ["@type.rust"]             = { fg = yellow },
     ["@variable.rust"]         = { fg = green },
 
     -- LSP (Semantic Tokens)
-    ["@lsp.type.variable.rust"]            = { fg = green },
-    ["@lsp.type.parameter.rust"]           = { fg = blue, italic = true }, -- Proviamo il blu per i parametri!
-    ["@lsp.mod.mutable.rust"]              = { fg = green, underline = true },
-    ["@lsp.typemod.variable.mutable.rust"] = { fg = green, underline = true },
+    ["@lsp.type.variable.rust"]            = { fg = giallo },
+--    ["@lsp.type.parameter.rust"]           = { fg = blue, italic = true }, -- Proviamo il blu per i parametri!
+--    ["@lsp.mod.mutable.rust"]              = { fg = green, underline = true },
+--    ["@lsp.typemod.variable.mutable.rust"] = { fg = green, underline = true },
 
     -- Costanti e Macro
-    ["@constant.rust"]         = { fg = purple, bold = true },
-    ["@lsp.type.enumMember.rust"] = { fg = purple },
-    ["@function.macro.rust"]   = { fg = red },
+--    ["@constant.rust"]         = { fg = purple, bold = true },
+--    ["@lsp.type.enumMember.rust"] = { fg = purple },
+--    ["@function.macro.rust"]   = { fg = red },
 
     -- Esempio per Stringhe e Commenti (se vuoi sovrascriverli)
     -- ["String"] = { fg = green },

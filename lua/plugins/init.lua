@@ -126,6 +126,14 @@ require("lazy").setup({
                       require("plugins.markdown-preview")
                       end,
                           },
+
+                      -- GDScript
+                      {
+                          "neovim/nvim-lspconfig",
+                      config = function()
+                      vim.lsp.config("gdscript", {})
+                      end
+                      }
 })
 
 
