@@ -94,6 +94,11 @@ Il tema utilizzato è **Everforest**.
   <br><em> Lazygit integrato in NeoVim </em>
 </p>
 
+<p align="center">
+  <img src="./screenshots/intro.png" width="65%" alt="Lazygit">
+  <br><em> Lazygit integrato in NeoVim </em>
+</p>
+
 
 ## ⌨️ Keymaps principali
 
