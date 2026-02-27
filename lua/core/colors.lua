@@ -1,5 +1,5 @@
 -- Definiamo una funzione che applica i colori
-print("DEBUG: Il file dei colori è stato caricato!")
+-- print("DEBUG: Il file dei colori è stato caricato!")
 
 local function apply_my_custom_colors()
 ----------------------------------------------------------------------------

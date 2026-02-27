@@ -163,6 +163,12 @@ local cheatsheet_lines = {
   "  <leader>sv/sh   → Split verticale / orizzontale",
   "  Ctrl-w h/j/k/l  → Muovi tra finestre",
   "  <leader>tn/tp   → Nuova tab / tab precedente",
+  "",
+  "󰘧  Comandi Lisp",
+  "  <leader>ee   → Valuta l'espressione (la parentesi) sotto il cursore",
+  "  <leader>er   → Nuova tab / tab precedenteValuta la root (tutta la funzione in cui ti trovi)",
+  "  <leader>eb   → Valuta l'intero buffer (tutto il file)",
+
 }
 
 
